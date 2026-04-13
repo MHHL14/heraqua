@@ -1,4 +1,4 @@
-{
+ {
     "$schema": "https://openapi.vercel.sh/vercel.json",
     "version": 2,
     "rewrites": [
@@ -9,9 +9,18 @@
       { "source": "/assets/:path*", "destination": "/frontend/assets/:path*" }
     ],
     "functions": {
-      "api/scan/foot.js": { "maxDuration": 30 },
-      "api/scan/gait.js": { "maxDuration": 30 },
-      "api/recommend.js": { "maxDuration": 20 }
+      "api/recommend.js": {
+        "maxDuration": 20,
+        "includeFiles": "{data/products.json,backend/upsells.json}"
+      },
+      "api/scan/foot.js": {
+        "maxDuration": 30,
+        "includeFiles": "backend/**"
+      },
+      "api/scan/gait.js": {
+        "maxDuration": 30,
+        "includeFiles": "backend/**"
+      }
     },
     "headers": [
       {
@@ -22,4 +31,3 @@
       }
     ]
   }
-
