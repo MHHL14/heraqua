@@ -1,25 +1,26 @@
 // POST /api/recommend — Claude-advies op basis van klantprofiel, verrijkt met
 // product-matching + upsells uit data/ en backend/.
-import { readFileSync } from 'fs';
-import { join } from 'path';
-import Anthropic from '@anthropic-ai/sdk';
-import { applyCors, checkAuth, readJsonBody, requireApiKey } from './_lib/shared.js';
+  import { readFileSync } from 'fs';
+  import { fileURLToPath } from 'url';
+  import Anthropic from '@anthropic-ai/sdk';
+  import { applyCors, checkAuth, readJsonBody, requireApiKey } from './_lib/shared.js';
 
-const ROOT = process.cwd();
+  const PRODUCTS_URL = new URL('../data/products.json', import.meta.url);
+  const UPSELLS_URL = new URL('../backend/upsells.json', import.meta.url);
 
-let PRODUCTS = [];
-try {
-  PRODUCTS = JSON.parse(readFileSync(join(ROOT, 'data', 'products.json'), 'utf8'));
-} catch (err) {
-  console.warn('products.json niet geladen:', err.message);
-}
+  let PRODUCTS = [];
+  try {
+    PRODUCTS = JSON.parse(readFileSync(fileURLToPath(PRODUCTS_URL), 'utf8'));
+  } catch (err) {
+    console.warn('products.json niet geladen:', err.message);
+  }
 
-let UPSELLS = {};
-try {
-  UPSELLS = JSON.parse(readFileSync(join(ROOT, 'backend', 'upsells.json'), 'utf8'));
-} catch (err) {
-  console.warn('upsells.json niet geladen:', err.message);
-}
+  let UPSELLS = {};
+  try {
+    UPSELLS = JSON.parse(readFileSync(fileURLToPath(UPSELLS_URL), 'utf8'));
+  } catch (err) {
+    console.warn('upsells.json niet geladen:', err.message);
+  }
 
 const SYSTEM_PROMPT = `Je bent Herman — de hardloopexpert van Herqua Sports in Hoogeveen. Je combineert 40 jaar hardloopexpertise met de nieuwste kennis over hardloopschoenen. Je spreekt de klant aan in jij-vorm: warm, persoonlijk, deskundig, direct.
 
