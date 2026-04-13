@@ -1,0 +1,11 @@
+parameters:
+    level: 6
+    paths:
+        - Model
+        - Controller
+        - Block
+        - Cron
+        - Observer
+    excludePaths:
+        - vendor
+        - Test

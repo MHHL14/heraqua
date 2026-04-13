@@ -1,0 +1,17 @@
+{
+  "name": "herqua-schoenadviseur",
+  "version": "2.3.0",
+  "private": true,
+  "type": "module",
+  "description": "Herqua AI Schoenadviseur — frontend + Vercel serverless backend",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.30.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

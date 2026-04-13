@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Herqua Schoenadviseur — Architectuur</title>
+<style>
+  :root {
+    --blue: #2e85c7;
+    --teal: #3aa69b;
+    --red: #d4443c;
+    --grey: #3a3938;
+    --soft: #eef9f8;
+    --line: #e2e2df;
+    --bg: #fafaf8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--grey);
+    line-height: 1.5;
+  }
+  header {
+    background: var(--grey); color: #fff;
+    padding: 24px 32px;
+  }
+  header h1 { margin: 0 0 4px; font-size: 22px; }
+  header p { margin: 0; opacity: 0.8; font-size: 14px; }
+  main {
+    max-width: 1200px; margin: 0 auto; padding: 24px 16px;
+    display: grid; gap: 32px;
+  }
+  section {
+    background: #fff; border-radius: 14px;
+    padding: 28px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  }
+  section h2 {
+    margin: 0 0 8px; font-size: 20px; color: var(--blue);
+  }
+  section > p.sub { margin: 0 0 24px; color: #6b6b6a; font-size: 14px; }
+  .diagram { display: flex; justify-content: center; margin: 16px 0 24px; }
+  .diagram svg { max-width: 100%; height: auto; }
+  .legend {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 12px; margin-top: 16px; font-size: 13px;
+  }
+  .legend .item {
+    padding: 10px 12px; border-radius: 8px;
+    background: var(--soft); border: 1px solid var(--line);
+  }
+  .legend .item strong { display: block; margin-bottom: 2px; color: var(--grey); }
+  .legend .item span { color: #6b6b6a; }
+  .ports-table {
+    width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 13px;
+  }
+  .ports-table th, .ports-table td {
+    text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line);
+  }
+  .ports-table th { background: #f4f4f3; font-weight: 700; }
+  .ports-table td code {
+    background: #f4f4f3; padding: 2px 6px; border-radius: 4px;
+    font-size: 12px;
+  }
+  footer {
+    text-align: center; padding: 32px 16px; color: #8b8b8a;
+    font-size: 12px;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Herqua Schoenadviseur — Architectuur</h1>
+  <p>Twee scenario's: lokale dev-setup vs productie in Magento 2</p>
+</header>
+
+<main>
+
+<!-- ===================== SCENARIO 1: LOCALHOST ===================== -->
+<section>
+  <h2>1. Lokaal draaien (dev / demo)</h2>
+  <p class="sub">Wat er nu draait op je MacBook. Twee lokale servers + je browser + externe Anthropic API.</p>
+
+  <div class="diagram">
+    <svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+      <!-- Browser (user) -->
+      <g>
+        <rect x="40" y="40" width="200" height="130" rx="10" fill="#fff" stroke="#3a3938" stroke-width="2"/>
+        <rect x="40" y="40" width="200" height="28" rx="10" fill="#3a3938"/>
+        <circle cx="56" cy="54" r="4" fill="#d4443c"/>
+        <circle cx="70" cy="54" r="4" fill="#e8c340"/>
+        <circle cx="84" cy="54" r="4" fill="#3aa69b"/>
+        <text x="140" y="58" font-size="11" fill="#fff" text-anchor="middle" font-family="system-ui">localhost:8080</text>
+        <text x="140" y="95" font-size="13" fill="#3a3938" text-anchor="middle" font-weight="700">Browser</text>
+        <text x="140" y="115" font-size="11" fill="#6b6b6a" text-anchor="middle">widget.js + wizard</text>
+        <text x="140" y="130" font-size="11" fill="#6b6b6a" text-anchor="middle">scan-foot, scan-gait</text>
+        <text x="140" y="150" font-size="11" fill="#6b6b6a" text-anchor="middle">MediaPipe Pose (CDN)</text>
+      </g>
+
+      <!-- Python http.server -->
+      <g>
+        <rect x="40" y="220" width="200" height="110" rx="10" fill="#eaf3fa" stroke="#2e85c7" stroke-width="2"/>
+        <text x="140" y="245" font-size="13" fill="#2e85c7" text-anchor="middle" font-weight="700">python3 -m http.server</text>
+        <text x="140" y="262" font-size="11" fill="#6b6b6a" text-anchor="middle">localhost:8080</text>
+        <text x="140" y="285" font-size="11" fill="#3a3938" text-anchor="middle">Statische frontend</text>
+        <text x="140" y="300" font-size="11" fill="#6b6b6a" text-anchor="middle">frontend/index.html</text>
+        <text x="140" y="315" font-size="11" fill="#6b6b6a" text-anchor="middle">frontend/js, frontend/css</text>
+      </g>
+
+      <!-- Node proxy -->
+      <g>
+        <rect x="350" y="220" width="220" height="140" rx="10" fill="#eef9f8" stroke="#3aa69b" stroke-width="2"/>
+        <text x="460" y="245" font-size="13" fill="#3aa69b" text-anchor="middle" font-weight="700">Node.js proxy.js</text>
+        <text x="460" y="262" font-size="11" fill="#6b6b6a" text-anchor="middle">localhost:3000</text>
+        <rect x="370" y="275" width="180" height="20" rx="4" fill="#fff" stroke="#b3d8d3"/>
+        <text x="460" y="289" font-size="10.5" fill="#3a3938" text-anchor="middle">POST /api/recommend</text>
+        <rect x="370" y="300" width="180" height="20" rx="4" fill="#fff" stroke="#b3d8d3"/>
+        <text x="460" y="314" font-size="10.5" fill="#3a3938" text-anchor="middle">POST /api/scan/foot</text>
+        <rect x="370" y="325" width="180" height="20" rx="4" fill="#fff" stroke="#b3d8d3"/>
+        <text x="460" y="339" font-size="10.5" fill="#3a3938" text-anchor="middle">POST /api/scan/gait</text>
+      </g>
+
+      <!-- products.json local -->
+      <g>
+        <rect x="350" y="40" width="220" height="130" rx="10" fill="#fff9ec" stroke="#c7a42e" stroke-width="2"/>
+        <text x="460" y="65" font-size="13" fill="#8a6e1a" text-anchor="middle" font-weight="700">Lokale bestanden</text>
+        <text x="460" y="95" font-size="11" fill="#3a3938" text-anchor="middle">data/products.json</text>
+        <text x="460" y="112" font-size="11" fill="#6b6b6a" text-anchor="middle">(v2a scraper output)</text>
+        <text x="460" y="138" font-size="11" fill="#3a3938" text-anchor="middle">backend/upsells.json</text>
+        <text x="460" y="155" font-size="11" fill="#6b6b6a" text-anchor="middle">(merk-aanbevelingen)</text>
+      </g>
+
+      <!-- Anthropic -->
+      <g>
+        <rect x="680" y="220" width="180" height="140" rx="10" fill="#fef0ee" stroke="#d4443c" stroke-width="2"/>
+        <text x="770" y="245" font-size="13" fill="#d4443c" text-anchor="middle" font-weight="700">Anthropic API</text>
+        <text x="770" y="262" font-size="11" fill="#6b6b6a" text-anchor="middle">api.anthropic.com</text>
+        <text x="770" y="290" font-size="11" fill="#3a3938" text-anchor="middle">Claude Sonnet</text>
+        <text x="770" y="305" font-size="11" fill="#6b6b6a" text-anchor="middle">text-based advies</text>
+        <text x="770" y="328" font-size="11" fill="#3a3938" text-anchor="middle">Claude Vision</text>
+        <text x="770" y="343" font-size="11" fill="#6b6b6a" text-anchor="middle">voet-foto analyse</text>
+      </g>
+
+      <!-- .env -->
+      <g>
+        <rect x="680" y="40" width="180" height="90" rx="10" fill="#f4f4f3" stroke="#8b8b8a" stroke-width="2" stroke-dasharray="4 4"/>
+        <text x="770" y="65" font-size="13" fill="#3a3938" text-anchor="middle" font-weight="700">.env</text>
+        <text x="770" y="90" font-size="11" fill="#6b6b6a" text-anchor="middle">ANTHROPIC_API_KEY</text>
+        <text x="770" y="108" font-size="11" fill="#6b6b6a" text-anchor="middle">PORT=3000</text>
+      </g>
+
+      <!-- Arrows -->
+      <!-- Browser -> Python server -->
+      <line x1="140" y1="170" x2="140" y2="220" stroke="#2e85c7" stroke-width="2"/>
+      <polygon points="136,215 144,215 140,223" fill="#2e85c7"/>
+      <text x="150" y="197" font-size="10" fill="#2e85c7">HTML/JS/CSS</text>
+
+      <!-- Browser -> Node proxy -->
+      <path d="M 240 105 Q 300 105, 340 260" stroke="#3aa69b" stroke-width="2" fill="none"/>
+      <polygon points="338,255 346,253 343,263" fill="#3aa69b"/>
+      <text x="275" y="155" font-size="10" fill="#3aa69b">fetch /api/*</text>
+      <text x="275" y="170" font-size="10" fill="#3aa69b">(JSON)</text>
+
+      <!-- Node -> Anthropic -->
+      <line x1="570" y1="290" x2="680" y2="290" stroke="#d4443c" stroke-width="2"/>
+      <polygon points="675,286 675,294 683,290" fill="#d4443c"/>
+      <text x="625" y="283" font-size="10" fill="#d4443c" text-anchor="middle">HTTPS</text>
+
+      <!-- Node -> products.json (read) -->
+      <line x1="460" y1="220" x2="460" y2="170" stroke="#c7a42e" stroke-width="2" stroke-dasharray="3 3"/>
+      <polygon points="456,175 464,175 460,167" fill="#c7a42e"/>
+      <text x="470" y="197" font-size="10" fill="#8a6e1a">read</text>
+
+      <!-- .env -> Node -->
+      <line x1="770" y1="130" x2="770" y2="220" stroke="#8b8b8a" stroke-width="1.5" stroke-dasharray="3 3"/>
+      <polygon points="766,215 774,215 770,223" fill="#8b8b8a"/>
+      <text x="775" y="175" font-size="10" fill="#6b6b6a">env</text>
+
+      <!-- Legend anchor -->
+      <text x="40" y="405" font-size="11" fill="#6b6b6a">Alles op één machine (jouw Mac). Browser spreekt met twee localhost-servers.</text>
+      <text x="40" y="425" font-size="11" fill="#6b6b6a">Enige externe call: Node → Anthropic API (via HTTPS met ANTHROPIC_API_KEY uit .env).</text>
+
+      <!-- Start commands box -->
+      <g>
+        <rect x="40" y="445" width="820" height="40" rx="8" fill="#f4f4f3" stroke="#b3b3b2"/>
+        <text x="60" y="465" font-size="11" font-family="ui-monospace,monospace" fill="#3a3938">
+          Terminal 1: cd backend/ && node proxy.js
+        </text>
+        <text x="60" y="480" font-size="11" font-family="ui-monospace,monospace" fill="#3a3938">
+          Terminal 2: cd frontend/ && python3 -m http.server 8080    →    open http://localhost:8080
+        </text>
+      </g>
+    </svg>
+  </div>
+
+  <table class="ports-table">
+    <thead>
+      <tr><th>Component</th><th>Port / URL</th><th>Rol</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Python http.server</td><td><code>localhost:8080</code></td><td>Serveert statische <code>frontend/</code> (HTML, JS, CSS)</td></tr>
+      <tr><td>Node proxy.js</td><td><code>localhost:3000</code></td><td>Routes <code>/api/recommend</code>, <code>/api/scan/foot</code>, <code>/api/scan/gait</code></td></tr>
+      <tr><td>products.json</td><td><code>data/products.json</code></td><td>Productcatalogus (v2a scraper output, 59 producten)</td></tr>
+      <tr><td>Anthropic API</td><td><code>api.anthropic.com</code></td><td>Claude voor advies + Vision voor voetscan</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ===================== SCENARIO 2: MAGENTO ===================== -->
+<section>
+  <h2>2. Productie in Magento 2 (v2c module)</h2>
+  <p class="sub">Magento-module serveert widget + product-data. Node.js AI-backend blijft een aparte service (externe host).</p>
+
+  <div class="diagram">
+    <svg viewBox="0 0 900 540" xmlns="http://www.w3.org/2000/svg">
+      <!-- Shopper browser -->
+      <g>
+        <rect x="40" y="40" width="200" height="130" rx="10" fill="#fff" stroke="#3a3938" stroke-width="2"/>
+        <rect x="40" y="40" width="200" height="28" rx="10" fill="#3a3938"/>
+        <circle cx="56" cy="54" r="4" fill="#d4443c"/>
+        <circle cx="70" cy="54" r="4" fill="#e8c340"/>
+        <circle cx="84" cy="54" r="4" fill="#3aa69b"/>
+        <text x="140" y="58" font-size="11" fill="#fff" text-anchor="middle">herqua.nl</text>
+        <text x="140" y="95" font-size="13" fill="#3a3938" text-anchor="middle" font-weight="700">Klant-browser</text>
+        <text x="140" y="115" font-size="11" fill="#6b6b6a" text-anchor="middle">Widget ingebed in</text>
+        <text x="140" y="130" font-size="11" fill="#6b6b6a" text-anchor="middle">CMS-pagina / categorie</text>
+        <text x="140" y="150" font-size="11" fill="#6b6b6a" text-anchor="middle">window.HERQUA_CONFIG</text>
+      </g>
+
+      <!-- Magento -->
+      <g>
+        <rect x="310" y="30" width="360" height="340" rx="12" fill="#f4f4f3" stroke="#3a3938" stroke-width="2" stroke-dasharray="6 4"/>
+        <text x="490" y="55" font-size="14" fill="#3a3938" text-anchor="middle" font-weight="700">Magento 2 — herqua.nl</text>
+
+        <!-- Module block -->
+        <g>
+          <rect x="330" y="75" width="320" height="180" rx="8" fill="#fff" stroke="#2e85c7" stroke-width="2"/>
+          <text x="490" y="95" font-size="12" fill="#2e85c7" text-anchor="middle" font-weight="700">Herqua_Schoenadviseur module</text>
+
+          <rect x="345" y="108" width="140" height="28" rx="5" fill="#eaf3fa"/>
+          <text x="415" y="126" font-size="10.5" fill="#2e85c7" text-anchor="middle">Block\\Widget\\Adviseur</text>
+
+          <rect x="495" y="108" width="140" height="28" rx="5" fill="#eaf3fa"/>
+          <text x="565" y="126" font-size="10.5" fill="#2e85c7" text-anchor="middle">view/frontend/web (JS+CSS)</text>
+
+          <rect x="345" y="145" width="140" height="28" rx="5" fill="#eef9f8"/>
+          <text x="415" y="163" font-size="10.5" fill="#3aa69b" text-anchor="middle">ProductExporter</text>
+
+          <rect x="495" y="145" width="140" height="28" rx="5" fill="#eef9f8"/>
+          <text x="565" y="163" font-size="10.5" fill="#3aa69b" text-anchor="middle">Cron + Observer</text>
+
+          <rect x="345" y="182" width="140" height="28" rx="5" fill="#fef0ee"/>
+          <text x="415" y="200" font-size="10.5" fill="#d4443c" text-anchor="middle">Admin: Field Mapping</text>
+
+          <rect x="495" y="182" width="140" height="28" rx="5" fill="#fef0ee"/>
+          <text x="565" y="200" font-size="10.5" fill="#d4443c" text-anchor="middle">Admin: Config</text>
+
+          <rect x="345" y="219" width="290" height="26" rx="5" fill="#fff9ec"/>
+          <text x="490" y="236" font-size="10.5" fill="#8a6e1a" text-anchor="middle">Frontend controller: GET /adviseur/products/index</text>
+        </g>
+
+        <!-- Catalog + cache -->
+        <g>
+          <rect x="330" y="275" width="150" height="80" rx="8" fill="#fff" stroke="#8b8b8a" stroke-width="2"/>
+          <text x="405" y="298" font-size="12" fill="#3a3938" text-anchor="middle" font-weight="700">Catalog</text>
+          <text x="405" y="317" font-size="10.5" fill="#6b6b6a" text-anchor="middle">catalog_product_entity</text>
+          <text x="405" y="332" font-size="10.5" fill="#6b6b6a" text-anchor="middle">+ EAV-attributen</text>
+          <text x="405" y="347" font-size="10.5" fill="#6b6b6a" text-anchor="middle">(herqua_drop_mm, …)</text>
+        </g>
+        <g>
+          <rect x="500" y="275" width="150" height="80" rx="8" fill="#fff9ec" stroke="#c7a42e" stroke-width="2"/>
+          <text x="575" y="298" font-size="12" fill="#8a6e1a" text-anchor="middle" font-weight="700">products.json cache</text>
+          <text x="575" y="320" font-size="10.5" fill="#6b6b6a" text-anchor="middle">pub/media/herqua/</text>
+          <text x="575" y="335" font-size="10.5" fill="#6b6b6a" text-anchor="middle">products.json</text>
+          <text x="575" y="350" font-size="9" fill="#8a6e1a" text-anchor="middle">(5min Cache-Control)</text>
+        </g>
+      </g>
+
+      <!-- Node backend (external host) -->
+      <g>
+        <rect x="720" y="160" width="160" height="160" rx="10" fill="#eef9f8" stroke="#3aa69b" stroke-width="2"/>
+        <text x="800" y="185" font-size="13" fill="#3aa69b" text-anchor="middle" font-weight="700">Node proxy.js</text>
+        <text x="800" y="203" font-size="10.5" fill="#6b6b6a" text-anchor="middle">api.herqua.ai</text>
+        <text x="800" y="219" font-size="10" fill="#6b6b6a" text-anchor="middle">(Railway / Fly / eigen VM)</text>
+
+        <rect x="735" y="230" width="130" height="22" rx="4" fill="#fff" stroke="#b3d8d3"/>
+        <text x="800" y="245" font-size="10" fill="#3a3938" text-anchor="middle">Bearer-auth</text>
+
+        <rect x="735" y="256" width="130" height="22" rx="4" fill="#fff" stroke="#b3d8d3"/>
+        <text x="800" y="271" font-size="10" fill="#3a3938" text-anchor="middle">CORS whitelist</text>
+
+        <rect x="735" y="282" width="130" height="22" rx="4" fill="#fff" stroke="#b3d8d3"/>
+        <text x="800" y="297" font-size="10" fill="#3a3938" text-anchor="middle">Rate-limit 30/u</text>
+      </g>
+
+      <!-- Anthropic -->
+      <g>
+        <rect x="720" y="370" width="160" height="90" rx="10" fill="#fef0ee" stroke="#d4443c" stroke-width="2"/>
+        <text x="800" y="395" font-size="13" fill="#d4443c" text-anchor="middle" font-weight="700">Anthropic API</text>
+        <text x="800" y="415" font-size="10.5" fill="#6b6b6a" text-anchor="middle">api.anthropic.com</text>
+        <text x="800" y="435" font-size="10.5" fill="#3a3938" text-anchor="middle">Claude Sonnet + Vision</text>
+      </g>
+
+      <!-- Arrows -->
+      <!-- Browser -> Magento: widget assets + products.json -->
+      <path d="M 240 90 Q 290 90, 330 150" stroke="#2e85c7" stroke-width="2" fill="none"/>
+      <polygon points="327,145 335,147 331,154" fill="#2e85c7"/>
+      <text x="260" y="118" font-size="10" fill="#2e85c7">page+assets</text>
+      <text x="260" y="132" font-size="10" fill="#2e85c7">products.json</text>
+
+      <!-- Browser -> Node backend (scan+advice) -->
+      <path d="M 240 140 Q 500 460, 720 240" stroke="#3aa69b" stroke-width="2" fill="none"/>
+      <polygon points="716,238 722,232 725,240" fill="#3aa69b"/>
+      <text x="420" y="450" font-size="10" fill="#3aa69b">fetch /api/* (met Bearer-token)</text>
+
+      <!-- ProductExporter -> Catalog -->
+      <line x1="415" y1="173" x2="405" y2="275" stroke="#3aa69b" stroke-width="1.5" stroke-dasharray="3 3"/>
+      <polygon points="401,270 409,270 405,278" fill="#3aa69b"/>
+      <text x="380" y="225" font-size="9" fill="#3aa69b" text-anchor="end">read</text>
+
+      <!-- ProductExporter -> cache -->
+      <line x1="480" y1="173" x2="560" y2="275" stroke="#c7a42e" stroke-width="1.5"/>
+      <polygon points="556,270 564,270 560,278" fill="#c7a42e"/>
+      <text x="540" y="215" font-size="9" fill="#8a6e1a">atomic write</text>
+
+      <!-- cache -> frontend controller -->
+      <line x1="575" y1="275" x2="500" y2="245" stroke="#c7a42e" stroke-width="1.5" stroke-dasharray="3 3"/>
+      <polygon points="504,248 500,241 496,250" fill="#c7a42e"/>
+
+      <!-- Node -> Anthropic -->
+      <line x1="800" y1="320" x2="800" y2="370" stroke="#d4443c" stroke-width="2"/>
+      <polygon points="796,365 804,365 800,373" fill="#d4443c"/>
+      <text x="808" y="350" font-size="10" fill="#d4443c">HTTPS</text>
+
+      <!-- Annotations -->
+      <text x="40" y="400" font-size="11" fill="#6b6b6a">Widget draait in klant-browser, fetcht product-data van Magento én AI-responses van externe Node-backend.</text>
+      <text x="40" y="418" font-size="11" fill="#6b6b6a">Magento admin beheert field-mapping tussen widget-velden en Magento product-attributen.</text>
+      <text x="40" y="436" font-size="11" fill="#6b6b6a">Cron + observer houden products.json synchroon met catalog.</text>
+
+      <!-- Config box -->
+      <g>
+        <rect x="40" y="460" width="840" height="60" rx="8" fill="#f4f4f3" stroke="#b3b3b2"/>
+        <text x="60" y="480" font-size="11" font-family="ui-monospace,monospace" fill="#3a3938">
+          Magento admin → Stores → Config → Herqua → Schoenadviseur:
+        </text>
+        <text x="60" y="495" font-size="11" font-family="ui-monospace,monospace" fill="#6b6b6a">
+          enabled=yes · data_source=magento_api · backend_url=https://api.herqua.ai · auth_token=(encrypted) · asset_source=bundled
+        </text>
+        <text x="60" y="510" font-size="11" font-family="ui-monospace,monospace" fill="#6b6b6a">
+          Node backend env: HERQUA_SHARED_TOKEN=… · ALLOWED_ORIGINS=https://herqua.nl · ANTHROPIC_API_KEY=…
+        </text>
+      </g>
+    </svg>
+  </div>
+
+  <div class="legend">
+    <div class="item">
+      <strong>Magento-module</strong>
+      <span>Serveert widget-assets + <code>/adviseur/products.json</code>, admin-UI voor config &amp; field-mapping.</span>
+    </div>
+    <div class="item">
+      <strong>Node-backend</strong>
+      <span>Aparte service (bv. Railway/Fly.io). Praat met Anthropic. Beveiligd met shared token + CORS + rate-limit.</span>
+    </div>
+    <div class="item">
+      <strong>Cron + Observer</strong>
+      <span>Cron rebuildt products.json cache (1×/dag). Observer markt 'dirty' bij product-save; volgende cron-tick rebuildt.</span>
+    </div>
+    <div class="item">
+      <strong>Widget-embed</strong>
+      <span>Drie manieren: CMS widget (drag &amp; drop), layout XML (developer), auto-embed op categoriepagina's (config-toggle).</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== VERSCHILLEN ===================== -->
+<section>
+  <h2>Verschillen in één tabel</h2>
+  <table class="ports-table">
+    <thead>
+      <tr><th>Aspect</th><th>Localhost (dev)</th><th>Magento (productie)</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Frontend hosting</td>
+        <td><code>python3 -m http.server 8080</code></td>
+        <td>Magento zelf serveert widget-assets via <code>view/frontend/web</code></td>
+      </tr>
+      <tr>
+        <td>Product-data</td>
+        <td>Statische <code>data/products.json</code> uit scraper</td>
+        <td>Magento catalog → cron rebuildt <code>pub/media/herqua/products.json</code></td>
+      </tr>
+      <tr>
+        <td>Config</td>
+        <td>Hardcoded URLs in JS + <code>.env</code> voor backend</td>
+        <td><code>window.HERQUA_CONFIG</code> geïnjecteerd door PHP Block uit admin-config</td>
+      </tr>
+      <tr>
+        <td>AI-backend</td>
+        <td><code>localhost:3000</code>, geen auth</td>
+        <td><code>api.herqua.ai</code>, Bearer-token + CORS whitelist + rate-limit</td>
+      </tr>
+      <tr>
+        <td>Secrets</td>
+        <td><code>.env</code> bestand</td>
+        <td>Magento encrypted config (<code>core_config_data</code>) + backend env vars</td>
+      </tr>
+      <tr>
+        <td>Admin-UI</td>
+        <td>Geen — edit files direct</td>
+        <td>Stores → Config + eigen Field Mapping pagina</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+</main>
+
+<footer>
+  <p>Herqua Schoenadviseur — v2c architectuur · gegenereerd <script>document.write(new Date().toLocaleDateString('nl-NL'))</script></p>
+</footer>
+
+</body>
+</html>

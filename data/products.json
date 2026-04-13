@@ -1,0 +1,592 @@
+[
+  {
+    "id": "herqua-1",
+    "brand": "Nike",
+    "name": "Pegasus 41 Hardloopschoenen Heren Zwart",
+    "gender": "Heren",
+    "price": "€ 124,56",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2106.80.0031-01_1.jpg",
+    "product_url": "https://www.herqua.nl/nike-pegasus-41-hardloopschoenen-heren-zwart-2106-80-0031",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-2",
+    "brand": "HOKA",
+    "name": "Clifton 10 Hardloopschoenen Heren Groen",
+    "gender": "Heren",
+    "price": "€ 132,76",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2106.30.0004-01_1.jpg",
+    "product_url": "https://www.herqua.nl/hoka-clifton-10-hardloopschoenen-heren-groen-2106-30-0004",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-3",
+    "brand": "ASICS",
+    "name": "Gel-Cumulus 28 Hardloopschoenen Heren Blauw",
+    "gender": "Heren",
+    "price": "€ 132,76",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2106.60.0061-01_1.jpg",
+    "product_url": "https://www.herqua.nl/asics-gel-cumulus-28-hardloopschoenen-heren-blauw-2106-60-0061",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-4",
+    "brand": "ASICS",
+    "name": "Gel-Nimbus 28 Tokyo Hardloopschoenen Heren Wit",
+    "gender": "Heren",
+    "price": "€ 165,96",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2106.10.0019-01_1.jpg",
+    "product_url": "https://www.herqua.nl/asics-gel-nimbus-28-tokyo-hardloopschoenen-heren-wit-2106-10-0019",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-5",
+    "brand": "ASICS",
+    "name": "Gel-Cumulus 28 Hardloopschoenen Heren Zwart",
+    "gender": "Heren",
+    "price": "€ 142,36",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2106.80.0055-01_1.jpg",
+    "product_url": "https://www.herqua.nl/asics-gel-cumulus-28-hardloopschoenen-heren-zwart-2106-80-0055",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-6",
+    "brand": "ASICS",
+    "name": "Novablast 5 Hardloopschoenen Heren Groen",
+    "gender": "Heren",
+    "price": "€ 124,46",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2106.30.0005-01_1.jpg",
+    "product_url": "https://www.herqua.nl/asics-novablast-5-hardloopschoenen-heren-groen-2106-30-0005",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-7",
+    "brand": "HOKA",
+    "name": "Clifton 10 Hardloopschoenen Heren Rood",
+    "gender": "Heren",
+    "price": "€ 132,76",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2106.50.0001-01_1.jpg",
+    "product_url": "https://www.herqua.nl/hoka-clifton-10-hardloopschoenen-heren-rood-2106-50-0001",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-8",
+    "brand": "ASICS",
+    "name": "Magic Speed 5 Hardloopschoenen Dames Groen",
+    "gender": "Dames",
+    "price": "€ 157,66",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2107.30.0019-01_1.jpg",
+    "product_url": "https://www.herqua.nl/asics-magic-speed-5-hardloopschoenen-dames-groen-2107-30-0019",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-9",
+    "brand": "HOKA",
+    "name": "Bondi 9 Wide Hardloopschoenen Heren Donkerblauw",
+    "gender": "Heren",
+    "price": "€ 148,75",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2106.65.0022-01_1.jpg",
+    "product_url": "https://www.herqua.nl/hoka-bondi-9-wide-hardloopschoenen-heren-donkerblauw-2106-65-0022",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-10",
+    "brand": "ASICS",
+    "name": "Gel-Kayano 32 Hardloopschoenen Heren Blauw dessin",
+    "gender": "Heren",
+    "price": "€ 177,96",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2106.69.0008-01_1.jpg",
+    "product_url": "https://www.herqua.nl/asics-gel-kayano-32-hardloopschoenen-heren-blauw-dessin-2106-69-0008",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-11",
+    "brand": "ASICS",
+    "name": "Magic Speed 5 Hardloopschoenen Heren Wit",
+    "gender": "Heren",
+    "price": "€ 157,66",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2106.10.0018-01_1.jpg",
+    "product_url": "https://www.herqua.nl/asics-magic-speed-5-hardloopschoenen-heren-wit-2106-10-0018",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-12",
+    "brand": "Nike",
+    "name": "Structure 26 Hardloopschoenen Heren Wit",
+    "gender": "Heren",
+    "price": "€ 116,16",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2106.61.0002-01_1.jpg",
+    "product_url": "https://www.herqua.nl/nike-structure-26-hardloopschoenen-heren-wit-2106-61-0002",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-13",
+    "brand": "adidas",
+    "name": "Adizero Evo SL M Hardloopschoenen Heren Wit",
+    "gender": "Heren",
+    "price": "€ 133,46",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2106.10.0017-01_1.jpg",
+    "product_url": "https://www.herqua.nl/adidas-adizero-evo-sl-m-hardloopschoenen-heren-wit-2106-10-0017",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-14",
+    "brand": "HOKA",
+    "name": "Bondi 9 Hardloopschoenen Heren Zwart",
+    "gender": "Heren",
+    "price": "€ 149,36",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2106.80.0034-01_1.jpg",
+    "product_url": "https://www.herqua.nl/hoka-bondi-9-hardloopschoenen-heren-zwart-2106-80-0034",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-15",
+    "brand": "HOKA",
+    "name": "Bondi 9 Hardloopschoenen Heren Donkerblauw",
+    "gender": "Heren",
+    "price": "€ 160,16",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2106.65.0055-01_1.jpg",
+    "product_url": "https://www.herqua.nl/hoka-bondi-9-hardloopschoenen-heren-donkerblauw-2106-65-0055",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-16",
+    "brand": "Nike",
+    "name": "Vomero 18 Hardloopschoenen Heren Zwart",
+    "gender": "Heren",
+    "price": "€ 124,46",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2106.80.0054-01_1.jpg",
+    "product_url": "https://www.herqua.nl/nike-vomero-18-hardloopschoenen-heren-zwart-2106-80-0054",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-17",
+    "brand": "Brooks",
+    "name": "Ghost 17 Hardloopschoenen Heren Wit",
+    "gender": "Heren",
+    "price": "€ 133,46",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2106.10.0016-01_1.jpg",
+    "product_url": "https://www.herqua.nl/brooks-ghost-17-hardloopschoenen-heren-wit-2106-10-0016",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-18",
+    "brand": "ASICS",
+    "name": "Gel-Excite 11 Hardloopschoenen Heren Zwart",
+    "gender": "Heren",
+    "price": "€ 80,06",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2106.80.0041-01.jpg",
+    "product_url": "https://www.herqua.nl/asics-gel-excite-11-hardloopschoenen-heren-zwart-2106-80-0041",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-19",
+    "brand": "ASICS",
+    "name": "Adrenaline GTS 24 Hardloopschoenen Heren Zwart",
+    "gender": "Heren",
+    "price": "€ 133,46",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2106.80.0030-01_1.jpg",
+    "product_url": "https://www.herqua.nl/asics-gel-sonoma-8-gtx-hardloopschoenen-heren-zwart-2106-80-0030",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-20",
+    "brand": "Brooks",
+    "name": "Adrenaline GTS 24 Hardloopschoenen Heren Beige",
+    "gender": "Heren",
+    "price": "€ 133,46",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2106.21.0001-01_1.jpg",
+    "product_url": "https://www.herqua.nl/brooks-adrenaline-gts-24-hardloopschoenen-heren-beige-2106-21-0001",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-21",
+    "brand": "Brooks",
+    "name": "Glycerin 22 Hardloopschoenen Heren Grijs",
+    "gender": "Heren",
+    "price": "€ 160,16",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2106.05.0009-01_1.jpg",
+    "product_url": "https://www.herqua.nl/brooks-glycerin-22-hardloopschoenen-heren-grijs-2106-05-0009",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-22",
+    "brand": "Brooks",
+    "name": "Glycerin GTS 22 Hardloopschoenen Heren Zwart",
+    "gender": "Heren",
+    "price": "€ 160,16",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2106.80.0050-01_1.jpg",
+    "product_url": "https://www.herqua.nl/brooks-glycerin-gts-22-hardloopschoenen-heren-zwart-2106-80-0050",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-23",
+    "brand": "On",
+    "name": "Cloud X4 Hardloopschoenen Heren Zwart dessin",
+    "gender": "Heren",
+    "price": "€ 159,95",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2106.89.0012-01.jpg",
+    "product_url": "https://www.herqua.nl/on-cloud-x4-hardloopschoenen-heren-zwart-dessin-2106-89-0012",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-24",
+    "brand": "HOKA",
+    "name": "Clifton 10 Hardloopschoenen Heren Zwart",
+    "gender": "Heren",
+    "price": "€ 142,36",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2106.80.0045-01_1.jpg",
+    "product_url": "https://www.herqua.nl/hoka-clifton-10-hardloopschoenen-heren-zwart-2106-80-0045",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-25",
+    "brand": "ASICS",
+    "name": "Gel-Nimbus 27 Hardloopschoenen Heren Zwart",
+    "gender": "Heren",
+    "price": "€ 165,96",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2106.80.0037-01_1.jpg",
+    "product_url": "https://www.herqua.nl/asics-gel-nimbus-27-hardloopschoenen-heren-zwart-2106-80-0037",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-26",
+    "brand": "Nike",
+    "name": "Structure 26 Hardloopschoenen Heren Licht Blauw",
+    "gender": "Heren",
+    "price": "€ 116,16",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2106.61.0001-01_1.jpg",
+    "product_url": "https://www.herqua.nl/nike-structure-26-hardloopschoenen-heren-licht-blauw-2106-61-0001",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-27",
+    "brand": "Nike",
+    "name": "Air Zoom Pegasus 41 Hardloopschoenen Heren Grijs",
+    "gender": "Heren",
+    "price": "€ 116,16",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2106.05.0011-01_1.jpg",
+    "product_url": "https://www.herqua.nl/nike-air-zoom-pegasus-41-hardloopschoenen-heren-grijs-2106-05-0011",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-28",
+    "brand": "ASICS",
+    "name": "Gel-Nimbus 27 Hardloopschoenen Heren Wit",
+    "gender": "Heren",
+    "price": "€ 165,96",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2106.10.0039-01_1.jpg",
+    "product_url": "https://www.herqua.nl/asics-gel-nimbus-27-hardloopschoenen-heren-wit-2106-10-0039",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-29",
+    "brand": "ASICS",
+    "name": "Gel-Cumulus 27 Hardloopschoenen Heren Zwart",
+    "gender": "Heren",
+    "price": "€ 142,36",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2106.80.0039-01_1.jpg",
+    "product_url": "https://www.herqua.nl/asics-gel-cumulus-27-hardloopschoenen-heren-zwart-2106-80-0039",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-30",
+    "brand": "HOKA",
+    "name": "Clifton 10 Hardloopschoenen Heren Donkergroen",
+    "gender": "Heren",
+    "price": "€ 142,36",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2106.38.0002-01_1.jpg",
+    "product_url": "https://www.herqua.nl/hoka-clifton-10-hardloopschoenen-heren-donkergroen-2106-38-0002",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-31",
+    "brand": "Nike",
+    "name": "Pegasus 41 Hardloopschoenen Dames Zwart",
+    "gender": "Dames",
+    "price": "€ 116,16",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2107.80.0007-01_1.jpg",
+    "product_url": "https://www.herqua.nl/nike-pegasus-41-hardloopschoenen-dames-zwart-2107-80-0007",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-32",
+    "brand": "ASICS",
+    "name": "Novablast 5 Hardloopschoenen Dames Wit",
+    "gender": "Dames",
+    "price": "€ 124,46",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2107.10.0029-01_1.jpg",
+    "product_url": "https://www.herqua.nl/asics-novablast-5-hardloopschoenen-dames-wit-2107-10-0029",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-33",
+    "brand": "ASICS",
+    "name": "Gel-Cumulus 28 Hardloopschoenen Dames Blauw",
+    "gender": "Dames",
+    "price": "€ 132,76",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2107.60.0006-01_1.jpg",
+    "product_url": "https://www.herqua.nl/asics-gel-cumulus-28-hardloopschoenen-dames-blauw-2107-60-0006",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-34",
+    "brand": "HOKA",
+    "name": "Arahi 8 Hardloopschoenen Dames Beige",
+    "gender": "Dames",
+    "price": "€ 142,36",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2107.21.0009-01_1_1.jpg",
+    "product_url": "https://www.herqua.nl/hoka-arahi-8-hardloopschoenen-dames-beige-2107-21-0009",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-35",
+    "brand": "HOKA",
+    "name": "Clifton 10 Hardloopschoenen Dames Zwart",
+    "gender": "Dames",
+    "price": "€ 142,36",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2107.80.0014-01_1.jpg",
+    "product_url": "https://www.herqua.nl/hoka-clifton-10-hardloopschoenen-dames-zwart-2107-80-0014",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-36",
+    "brand": "Nike",
+    "name": "Structure 26 Hardloopschoenen Dames Lila",
+    "gender": "Dames",
+    "price": "€ 116,16",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2107.71.0029-01_1.jpg",
+    "product_url": "https://www.herqua.nl/nike-structure-26-hardloopschoenen-dames-lila-2107-71-0029",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-37",
+    "brand": "HOKA",
+    "name": "Bondi 9 Hardloopschoenen Dames Beige",
+    "gender": "Dames",
+    "price": "€ 160,16",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2107.80.0017-01_1.jpg",
+    "product_url": "https://www.herqua.nl/hoka-bondi-9-hardloopschoenen-dames-beige-2107-80-0017",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-38",
+    "brand": "Brooks",
+    "name": "Ghost 17 Hardloopschoenen Dames Wit",
+    "gender": "Dames",
+    "price": "€ 133,46",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2107.10.0015-01_1.jpg",
+    "product_url": "https://www.herqua.nl/brooks-ghost-17-hardloopschoenen-dames-wit-2107-10-0015",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-39",
+    "brand": "ASICS",
+    "name": "Gel-Pulse 16 Hardloopschoenen Dames Wit",
+    "gender": "Dames",
+    "price": "€ 102,25",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2107.10.0011-01_1.jpg",
+    "product_url": "https://www.herqua.nl/asics-gel-pulse-16-hardloopschoenen-dames-wit-2107-10-0011",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-40",
+    "brand": "Brooks",
+    "name": "Adrenaline GTS 24 Hardloopschoenen Dames Zwart",
+    "gender": "Dames",
+    "price": "€ 125,00",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2107.80.0010-01_1.jpg",
+    "product_url": "https://www.herqua.nl/brooks-adrenaline-gts-24-hardloopschoenen-dames-zwart-2107-80-0010",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-41",
+    "brand": "On",
+    "name": "Cloudsurfer 2 Hardloopschoenen Dames Blauw",
+    "gender": "Dames",
+    "price": "€ 151,26",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2107.60.0003-01_1.jpg",
+    "product_url": "https://www.herqua.nl/on-cloudsurfer-2-hardloopschoenen-dames-blauw-2107-60-0003",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-42",
+    "brand": "Brooks",
+    "name": "Adrenaline GTS 24 Hardloopschoenen Dames Beige",
+    "gender": "Dames",
+    "price": "€ 133,46",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2107.21.0007-01_1.jpg",
+    "product_url": "https://www.herqua.nl/brooks-adrenaline-gts-24-hardloopschoenen-dames-beige-2107-21-0007",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-43",
+    "brand": "Brooks",
+    "name": "Glycerin 22 Hardloopschoenen Dames Zwart",
+    "gender": "Dames",
+    "price": "€ 160,16",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2107.80.0015-01_1.jpg",
+    "product_url": "https://www.herqua.nl/brooks-glycerin-22-hardloopschoenen-dames-zwart-2107-80-0015",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-44",
+    "brand": "HOKA",
+    "name": "Bondi 9 Hardloopschoenen Dames Zwart",
+    "gender": "Dames",
+    "price": "€ 160,16",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2107.80.0008-01_1.jpg",
+    "product_url": "https://www.herqua.nl/hoka-bondi-9-hardloopschoenen-dames-zwart-2107-80-0008",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-45",
+    "brand": "Nike",
+    "name": "Structure 26 Hardloopschoenen Dames Wit",
+    "gender": "Dames",
+    "price": "€ 116,16",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2107.10.0125-01_1.jpg",
+    "product_url": "https://www.herqua.nl/nike-structure-26-hardloopschoenen-dames-wit-2107-10-0125",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-46",
+    "brand": "adidas",
+    "name": "Adizero Evo SL W Hardloopschoenen Dames Wit",
+    "gender": "Dames",
+    "price": "€ 124,46",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2107.10.0022-01_1.jpg",
+    "product_url": "https://www.herqua.nl/adidas-adizero-evo-sl-w-hardloopschoenen-dames-wit-2107-10-0022",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-47",
+    "brand": "HOKA",
+    "name": "Clifton 10 Hardloopschoenen Dames Roze",
+    "gender": "Dames",
+    "price": "€ 132,76",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2107.51.0002-01_1.jpg",
+    "product_url": "https://www.herqua.nl/hoka-clifton-10-hardloopschoenen-dames-roze-2107-51-0002",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-48",
+    "brand": "Nike",
+    "name": "W Air Zoom Pegasus 41 Hardloopschoenen Dames Grijs",
+    "gender": "Dames",
+    "price": "€ 124,56",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2107.05.0005-01_1.jpg",
+    "product_url": "https://www.herqua.nl/nike-w-air-zoom-pegasus-41-hardloopschoenen-dames-grijs-2107-05-0005",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-49",
+    "brand": "ASICS",
+    "name": "GT-2000 13 Hardloopschoenen Dames Grijs",
+    "gender": "Dames",
+    "price": "€ 125,00",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2107.05.0004-01_1.jpg",
+    "product_url": "https://www.herqua.nl/asics-gt-2000-13-hardloopschoenen-dames-grijs-2107-05-0004",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-50",
+    "brand": "ASICS",
+    "name": "Gel-Cumulus 27 Hardloopschoenen Dames Zwart",
+    "gender": "Dames",
+    "price": "€ 132,76",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2107.80.0012-01_1.jpg",
+    "product_url": "https://www.herqua.nl/asics-gel-cumulus-27-hardloopschoenen-dames-zwart-2107-80-0012",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-51",
+    "brand": "Nike",
+    "name": "Pegasus 41 Hardloopschoenen Dames Blauw",
+    "gender": "Dames",
+    "price": "€ 115,00",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2107.60.0005-01_1.jpg",
+    "product_url": "https://www.herqua.nl/nike-pegasus-41-hardloopschoenen-dames-blauw-2107-60-0005",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-52",
+    "brand": "ASICS",
+    "name": "Gel-Cumulus 27 Hardloopschoenen Dames Wit",
+    "gender": "Dames",
+    "price": "€ 132,76",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2107.10.0010-01_1.jpg",
+    "product_url": "https://www.herqua.nl/asics-gel-cumulus-27-hardloopschoenen-dames-wit-2107-10-0010",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-53",
+    "brand": "Nike",
+    "name": "Structure 25 SE Hardloopschoenen Dames Blauw dessin",
+    "gender": "Dames",
+    "price": "€ 115,00",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2107.69.0003-01_1.jpg",
+    "product_url": "https://www.herqua.nl/nike-structure-25-se-hardloopschoenen-dames-blauw-dessin-2107-69-0003",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-54",
+    "brand": "Brooks",
+    "name": "Ghost 16 Hardloopschoenen Dames Zwart",
+    "gender": "Dames",
+    "price": "€ 124,46",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2107.80.0002-01_1.jpg",
+    "product_url": "https://www.herqua.nl/brooks-ghost-16-hardloopschoenen-dames-zwart-2107-80-0002",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-55",
+    "brand": "Brooks",
+    "name": "Ghost 16 Hardloopschoenen Dames Koraal",
+    "gender": "Dames",
+    "price": "€ 125,00",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2107.58.0001-01_1.jpg",
+    "product_url": "https://www.herqua.nl/brooks-ghost-16-hardloopschoenen-dames-koraal-2107-58-0001",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-56",
+    "brand": "Brooks",
+    "name": "Ghost Max 2 Hardloopschoenen Dames Beige",
+    "gender": "Dames",
+    "price": "€ 142,36",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2107.21.0003-01_1.jpg",
+    "product_url": "https://www.herqua.nl/brooks-ghost-max-2-hardloopschoenen-dames-beige-2107-21-0003",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-57",
+    "brand": "ASICS",
+    "name": "Dynablast 5 Hardloopschoenen Dames Paars",
+    "gender": "Dames",
+    "price": "€ 115,00",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2107.70.0001-01_1.jpg",
+    "product_url": "https://www.herqua.nl/asics-dynablast-5-hardloopschoenen-dames-paars-2107-70-0001",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-58",
+    "brand": "ASICS",
+    "name": "Gel-Cumulus 27 Hardloopschoenen Dames Beige",
+    "gender": "Dames",
+    "price": "€ 125,00",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2107.21.0004-01_1.jpg",
+    "product_url": "https://www.herqua.nl/asics-gel-cumulus-27-hardloopschoenen-dames-beige-2107-21-0004",
+    "in_stock": true
+  },
+  {
+    "id": "herqua-59",
+    "brand": "Nike",
+    "name": "Structure 25 PRM Hardloopschoenen Dames Pink",
+    "gender": "Dames",
+    "price": "€ 115,00",
+    "image_url": "https://www.herqua.nl/media/catalog/product/cache/19c3a07dd2fa34e284b1dd42cf05cb66/2/1/2107.52.0001-01_1.jpg",
+    "product_url": "https://www.herqua.nl/nike-structure-25-prm-hardloopschoenen-dames-pink-2107-52-0001",
+    "in_stock": true
+  }
+]

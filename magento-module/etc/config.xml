@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <herqua_schoenadviseur>
+            <general>
+                <enabled>0</enabled>
+                <data_source>scraping</data_source>
+            </general>
+            <widget>
+                <asset_source>bundled</asset_source>
+                <auto_embed>0</auto_embed>
+            </widget>
+            <sync>
+                <cron_frequency>daily</cron_frequency>
+            </sync>
+        </herqua_schoenadviseur>
+    </default>
+</config>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
+    <group id="default">
+        <job name="herqua_schoenadviseur_rebuild_products"
+             instance="Herqua\Schoenadviseur\Cron\RebuildProducts"
+             method="execute">
+            <config_path>herqua_schoenadviseur/sync/cron_expr</config_path>
+            <schedule>0 3 * * *</schedule>
+        </job>
+    </group>
+</config>

@@ -1,0 +1,17 @@
+{
+  "name": "herqua-schoenadviseur-backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node proxy.js",
+    "scrape": "node ../data/scrape-products.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.30.0",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "playwright": "^1.47.0"
+  }
+}

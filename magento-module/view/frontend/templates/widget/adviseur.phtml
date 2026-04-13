@@ -1,0 +1,12 @@
+<?php
+/** @var \Herqua\Schoenadviseur\Block\Widget\Adviseur $block */
+$containerId = $block->getContainerId();
+?>
+<link rel="stylesheet" href="<?= $block->escapeUrl($block->getWidgetCssUrl()) ?>">
+<link rel="stylesheet" href="<?= $block->escapeUrl($block->getScanCssUrl()) ?>">
+<div id="<?= $block->escapeHtmlAttr($containerId) ?>"></div>
+<script>
+    window.HERQUA_CONFIG = <?= $block->getConfigJson() ?>;
+    window.HERQUA_CONTAINER_ID = <?= json_encode($containerId) ?>;
+</script>
+<script src="<?= $block->escapeUrl($block->getWidgetJsUrl()) ?>" defer></script>

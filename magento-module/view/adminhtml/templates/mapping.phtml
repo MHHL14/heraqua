@@ -1,0 +1,50 @@
+<?php
+/** @var \Herqua\Schoenadviseur\Block\Adminhtml\Mapping $block */
+$mapping = $block->getMapping();
+$required = $block->getRequiredFields();
+$options = $block->getAttributeOptions();
+?>
+<div class="herqua-mapping">
+    <?php if ($block->getLastSync()): ?>
+        <p><strong><?= __('Laatste sync') ?>:</strong> <?= $block->escapeHtml($block->getLastSync()) ?></p>
+    <?php endif; ?>
+
+    <form action="<?= $block->escapeUrl($block->getSaveUrl()) ?>" method="post">
+        <?= $block->getBlockHtml('formkey') ?>
+        <table class="data-grid">
+            <thead>
+                <tr>
+                    <th><?= __('Widget-veld') ?></th>
+                    <th><?= __('Magento attribute') ?></th>
+                    <th><?= __('Verplicht') ?></th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($mapping as $widgetField => $magentoAttr): ?>
+                    <tr>
+                        <td><?= $block->escapeHtml($widgetField) ?></td>
+                        <td>
+                            <select name="mapping[<?= $block->escapeHtmlAttr($widgetField) ?>]">
+                                <option value=""><?= __('-- Niet mappen --') ?></option>
+                                <?php foreach ($options as $code => $label): ?>
+                                    <option value="<?= $block->escapeHtmlAttr($code) ?>"
+                                        <?= $code === $magentoAttr ? 'selected' : '' ?>>
+                                        <?= $block->escapeHtml($label . ' (' . $code . ')') ?>
+                                    </option>
+                                <?php endforeach; ?>
+                            </select>
+                        </td>
+                        <td><?= in_array($widgetField, $required, true) ? '✓' : '' ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+
+        <div class="actions" style="margin-top: 1em;">
+            <button type="submit" class="action-primary"><?= __('Save mapping') ?></button>
+            <a href="<?= $block->escapeUrl($block->getRebuildUrl()) ?>" class="action-secondary">
+                <?= __('Rebuild products.json now') ?>
+            </a>
+        </div>
+    </form>
+</div>

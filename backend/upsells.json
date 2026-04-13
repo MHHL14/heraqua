@@ -1,0 +1,12 @@
+{
+  "ASICS":       { "icon": "🎁", "text": "Gratis Stance hardloopsokken (t.w.v. €14,95) bij deze schoen" },
+  "Brooks":      { "icon": "💸", "text": "5% korting op een Garmin hardloophorloge bij deze schoen" },
+  "HOKA":        { "icon": "🎁", "text": "Gratis hardloopsokken (t.w.v. €12,95) bij deze schoen" },
+  "Nike":        { "icon": "💸", "text": "10% korting op een Nike hardloopshirt bij deze schoen" },
+  "adidas":      { "icon": "💸", "text": "10% korting op een adidas hardloopbroek bij deze schoen" },
+  "Saucony":     { "icon": "🎁", "text": "Gratis bidon (t.w.v. €9,95) bij deze schoen" },
+  "Mizuno":      { "icon": "💸", "text": "5% korting op hardloopaccessoires bij deze schoen" },
+  "Salomon":     { "icon": "🎁", "text": "Gratis trailgamaschen bij deze schoen" },
+  "New Balance": { "icon": "💸", "text": "5% korting op een hardloopshirt bij deze schoen" },
+  "On":          { "icon": "🎁", "text": "Gratis hardloopsokken bij deze schoen" }
+}

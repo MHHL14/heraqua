@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Herqua_Schoenadviseur::main" title="Schoenadviseur" module="Herqua_Schoenadviseur" sortOrder="100" resource="Herqua_Schoenadviseur::main"/>
+        <add id="Herqua_Schoenadviseur::mapping" title="Field Mapping" module="Herqua_Schoenadviseur"
+             sortOrder="10" parent="Herqua_Schoenadviseur::main"
+             action="herqua_schoenadviseur/mapping/index"
+             resource="Herqua_Schoenadviseur::mapping"/>
+        <add id="Herqua_Schoenadviseur::rebuild" title="Rebuild products.json" module="Herqua_Schoenadviseur"
+             sortOrder="20" parent="Herqua_Schoenadviseur::main"
+             action="herqua_schoenadviseur/rebuild/index"
+             resource="Herqua_Schoenadviseur::rebuild"/>
+    </menu>
+</config>

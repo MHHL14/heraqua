@@ -1,0 +1,21 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "version": 2,
+  "rewrites": [
+    { "source": "/", "destination": "/frontend/index.html" },
+    { "source": "/architecture", "destination": "/frontend/architecture.html" }
+  ],
+  "functions": {
+    "api/scan/foot.js": { "maxDuration": 30, "memory": 1024 },
+    "api/scan/gait.js": { "maxDuration": 30, "memory": 1024 },
+    "api/recommend.js": { "maxDuration": 20, "memory": 512 }
+  },
+  "headers": [
+    {
+      "source": "/frontend/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=300" }
+      ]
+    }
+  ]
+}
